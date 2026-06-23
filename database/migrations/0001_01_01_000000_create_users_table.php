@@ -9,8 +9,11 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+
+    
     public function up(): void
     {
+        Schema::dropIfExists('users'); // Agrega esta línea
         Schema::create('users', function (Blueprint $table) {
             $table->id(); // int UNSIGNED AUTO_INCREMENT
             $table->string('name', 60);
