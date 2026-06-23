@@ -85,17 +85,17 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => env('DB_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'url' => env('postgresql://neondb_owner:npg_mV6DbSF7hvgU@ep-cold-darkness-atd4zpav-pooler.c-9.us-east-1.aws.neon.tech/laravel_login?sslmode=require&channel_binding=require'),
+            'host' => env('ep-cold-darkness-atd4zpav-pooler.c-9.us-east-1.aws.neon.tech'),
             'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'laravel'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', ''),
+            'database' => env('laravel_login'),
+            'username' => env('neondb_owner'),
+            'password' => env('npg_mV6DbSF7hvgU'),
             'charset' => env('DB_CHARSET', 'utf8'),
             'prefix' => '',
             'prefix_indexes' => true,
             'search_path' => 'public',
-            'sslmode' => env('DB_SSLMODE', 'prefer'),
+            'sslmode' => env('DB_SSLMODE', 'require'),
         ],
 
         'sqlsrv' => [
